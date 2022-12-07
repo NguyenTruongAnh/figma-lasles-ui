@@ -1,0 +1,28 @@
+.network {
+    padding-bottom: 36px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-heading {
+        max-width: 384px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &-desc {
+        max-width: 555px;
+        text-align: center;
+        margin-bottom: 156px;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .network-desc {
+        margin-bottom: 28px;
+    }
+}
+

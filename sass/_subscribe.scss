@@ -1,0 +1,40 @@
+.subscribe {
+    transform: translateY(50%);
+    background-color: var(--background-color);
+    border-radius: 32px;
+
+    &-container {
+        padding: 58px 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-heading {
+        max-width: 372px;
+        margin-bottom: 20px;
+    }
+
+    &-desc {
+        max-width: 410px;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .subscribe-container {
+        padding: 24px 40px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .subscribe {
+        transform: unset;
+    }
+
+    .subscribe-container {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+}
+
+

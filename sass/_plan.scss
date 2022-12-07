@@ -1,0 +1,114 @@
+.plan {
+    padding-bottom: 150px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-heading {
+        max-width: 384px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &-desc {
+        max-width: 555px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0 50px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 70px 50px;
+        border: 1px solid $gray-color;
+        border-radius: 10px;
+
+        &.active,
+        &:hover {
+            border-color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+    &-title {
+        margin: 30px 0;
+    }
+
+    &-detail {
+        gap: 10px 0;
+        margin-bottom: 50px;
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+    }
+
+    &-fee {
+        font-size: 25px;
+        line-height: calc(30/25);
+        margin-bottom: 20px;
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .plan {
+        padding-bottom: 80px;
+    }
+
+    .plan-desc {
+        margin-bottom: 28px;
+    }
+    
+    .plan-list {
+        grid-gap: 0 20px;
+    }
+
+    .plan-item {
+        padding: 20px 18px;
+    }
+
+    .plan-info {
+        gap: 0 8px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .plan-list {
+        width: 100%;
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+    }
+
+    .plan-list {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .plan-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .plan-item {
+        scroll-snap-align: center;
+    }
+}
+

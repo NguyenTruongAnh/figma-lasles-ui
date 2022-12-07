@@ -1,0 +1,91 @@
+.header {
+    padding: 20px 0;
+    background-color: var(--header-background-color);
+    overflow: hidden;
+
+    &-container {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-auth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 30px;
+    }
+
+    &-signin {
+        font-weight: 500;
+        color: var(--heading-color);
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    &-mode {
+        label {
+            position: relative;
+            width: 80px;
+            height: 34px;
+            background: var(--header-background-color-color);
+            box-shadow: 0 0 0 1px var(--text-color);
+            border-radius: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        label input {
+            appearance: none;
+        }
+
+        label span {
+            position: absolute;
+            left: 0;
+            width: 90px;
+            height: 30px;
+            background-image: url('../images/Coffee_01.png');
+            background-size: auto 30px;
+            background-repeat: no-repeat;
+            transform: rotate(-180deg);
+            transition: 1s;
+            transform-origin: 15px;
+        }
+
+        label input:checked~span {
+            left: 48px;
+            background-image: url('../images/Coffee_02.png');
+            background-size: auto 30px;
+            background-repeat: no-repeat;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .header {
+        padding: 12px 0;
+    }
+
+    .header-auth {
+        display: none;
+    }
+
+    .header-signin {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .header-right .header-mode {
+        display: none;
+    }
+}

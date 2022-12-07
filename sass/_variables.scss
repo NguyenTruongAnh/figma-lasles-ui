@@ -1,0 +1,23 @@
+$font-family: 'Rubik', sans-serif;
+$primary-color: #F53838;
+$gray-color: #DDE0E4;
+$gray-light-color: #f8f8f8;
+$gray-lighter-color: #DDDDDD;
+$white-color: #ffffff;
+$background-color: #ffffff;
+
+html {
+    --background-color: #ffffff;
+    --text-color: #4F5665;
+    --heading-color: #0B132A;
+    --header-background-color: #ffffff;
+    --footer-background-color: #f8f8f8;
+}
+
+html[data-theme="dark"] {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --heading-color: #ffffff;
+    --header-background-color: #3c3c3c;
+    --footer-background-color: #3c3c3c;
+}
